@@ -1,0 +1,329 @@
+@mixin join-button {				
+	width: 144px;
+	height: 48px;					
+	font-size: 16px;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+}
+
+@mixin link-style {
+	color: $buttonLinkTextColor;
+	font-family: $linkFont;
+	font-weight: 600;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $bodyColor;
+	.header {
+		display: flex;
+		flex-flow: column;		
+		.header-wrap {
+			width: 1920px;
+			height: 720px;
+			display: flex;	
+			flex-flow: column;	
+			background: $bgImage;
+			background-size: cover;
+			border-bottom-right-radius: 50em 17.5em;					
+			.landing-logo {
+				margin-left: 193px;
+				margin-top: 20px;
+				display: flex;			
+				width:140px;
+				height: 45px;
+				p {
+					display: block;
+					font-family: $allText;
+					font-size: 24px;
+					font-weight: 600;
+					padding-left: 15px;
+					padding-top: 4px;
+					text-align: center;
+					line-height: 1;
+					color: $textColor;					
+					span {
+						display: block;
+						font-weight: normal;
+						font-size: 10px;
+						line-height: 1.5;
+					}
+				}
+			}		
+			.header_heading {
+				display: block;
+				width: 650px;
+				height: 160px;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 72px;
+				font-weight: bolder;
+				margin-top: 70px;
+				margin-left: 193px;
+				line-height: 1;
+				color: $textColor;
+				position: relative;				
+				&::after {
+					content: 'awesome';
+					color: black;
+					position: absolute;
+					left: 0;				
+					z-index: 1;
+					background: $afterColor;											
+				}	
+			}
+			.header_text {
+				display: block;
+				width: 580px;
+				height: 120px;
+				margin-top: 46px;
+				margin-left: 193px;			
+				font-family: $allText;
+				font-size: 16px;			
+				line-height: 1.5;
+				color: $textColor;								
+			}
+			.header_button {
+				@include join-button;
+				color: $buttonLinkTextColor;
+				background-color: $buttonBgColor;
+				margin-left: 193px;
+				margin-top: 37px;				
+			}
+			.login {
+				margin-left: 147px;				
+				font-size: 20px;	
+				@include link-style;						
+			}
+		}	
+	}
+
+	.section {		
+		@extend .header;
+		justify-content: center;
+		align-items: center;	
+		.section_text {
+			display: block;
+			width: 450px;
+			font-family: 'Hind', sans-serif;
+			font-weight: 600;
+			font-size: 40px;
+			margin-top: 36px;
+			margin-left: 50px;		
+			text-align: justify;
+			color: $textColor;
+			position: relative;
+			&::after {
+				content: 'adventure';
+				color: black;
+				position: absolute;
+				right: 46px;
+				bottom: 2px;
+				height: 50px;
+				z-index: 1;
+				background: $afterColor;				
+				margin-bottom: 12px;
+			}						
+		}
+		.section_card_wrap {
+			width: 1116px;		
+			margin-left: 20px;
+			.section_card {
+				width: 1116px;
+				height: 325px;			
+				border-radius: 4px;
+				background-color: $sectionCardColor;
+				display: flex;
+				margin-top: 27px;
+				align-items: center;		
+				&:nth-child(2){
+					height: 313px;
+					.section_card_img {
+						width: 416px;
+						height: 275px;
+						border-radius: 6px;
+					}
+					.section_card_right_container {
+						.section_card_text {
+							margin-top: 35px;						
+						}
+						.section_link {
+							margin-top: 19px;
+							margin-right: 1px;
+						}
+					}
+				}
+				&:last-child{
+					height: 341px;
+					.section_card_img {
+						width: 459px;
+						height: 304px;
+						border-radius: 6px;
+					}
+					.section_card_right_container {
+						.section_card_heading {
+							margin-right: 37px;
+						}
+						.section_card_text {
+							margin-top: 63px;
+							margin-right: 43px;						
+							width: 450px;							
+						}
+						.section_link {
+							margin-top: 30px;
+							margin-right: 42px;
+						}
+					}
+				}
+				.section_card_img {
+					width: 431px;
+					height: 286px;
+					margin-left: 20px;
+					border-radius: 6px;
+					margin-right: 89px;
+				}
+				.section_card_right_container {
+					width: 480px;
+					height: 285px;
+					display: flex;
+					flex-flow: column;
+					align-items: center;				
+					.section_card_heading {
+						font-family: 'Source Sans Pro', sans-serif;
+						font-size: 24px;
+						font-weight: 500;
+						color: #fff;
+						text-align: center;
+						margin-top: 48px;									
+					}
+					.section_card_text {
+						color: #fff;
+						font-family: $allText;
+						font-size: 16px;
+						text-align: justify;
+						margin-top: 39px;					
+						line-height: 1.5;
+					}				
+					.section_link {						
+						@include link-style;
+						font-size: 16px;					
+						text-align: center;		
+						margin-top: 20px;
+						margin-right: 12px;
+					}
+				}
+			}
+		}
+		
+		.section_banner {
+			height: 142px;
+			width: 1198px;		
+			margin-top: 142px;
+			margin-left: 20px;
+			border-radius: 6px;
+			background: $bannerGradient;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;			
+			z-index: map-get($z-layers, overlay); 		
+			.section_banner_text_wrap {
+				width: 420px;
+				height: 90px;
+				margin-left: 160px;			
+				margin-top: 9px;
+				.section_banner_heading {
+					font-family: 'Hind', sans-serif;
+					font-size: 30px;
+					font-weight: 800;				
+					line-height: 1;
+					color: $textColor;
+					position: relative;
+					&::after {
+						content: 'start';
+						color: black;
+						position: absolute;
+						left: 125px;
+						bottom: 1px;
+						height: 30px;
+						z-index: 1;
+						background: $afterColor;
+						padding-top: 20px;						
+					}					
+				}
+				.section_banner_text {
+					font-family: $allText;
+					font-size: 16px;
+					color:#fff;
+					padding-left: 1px;
+					padding-top: 16px;
+				}
+			}
+			.section_banner_button {
+				@include join-button;
+				color: $buttonLinkTextColor;
+				background-color: $buttonBgColor;
+				margin-right: 160px;
+			}
+		}
+	}
+
+	.footer {	
+		width: 1920px;	
+		margin-top: -70px;
+		background-color: $footerColor;			
+		.footer-wrap {
+			height: 241px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			.footer_logo.landing-logo {
+				margin-left: 194px;
+				margin-bottom: 61px;			
+				display: flex;			
+				width:140px;
+				height: 45px;					
+				p {
+					display: block;
+					font-family: $allText;
+					font-size: 24px;
+					font-weight: 600;
+					padding-left: 15px;
+					padding-top: 4px;
+					text-align: center;
+					line-height: 1;
+					color: #fff;
+					span {
+						display: block;
+						font-weight: normal;
+						font-size: 10px;
+						line-height: 1.5;
+					}
+				}
+			}
+			.footer_text {
+				color: #fff;
+				display: flex;
+				width: 292px;
+				height: 55px;
+				font-family: $allText;
+				font-size: 14px;
+				margin-bottom: 61px;
+				line-height: 1.5;			
+				margin-right: 30px;			
+			}
+			.footer-cr {
+				color: #fff;
+				display: flex;
+				font-family: $allText;
+				font-size: 16px;			
+				margin-bottom: 70px;
+				margin-right: 190px;				
+			}
+		}
+	}
+}
