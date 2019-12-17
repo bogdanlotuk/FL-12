@@ -1,0 +1,266 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	max-width: 1600px;	
+	margin: 0 auto;	
+}
+
+header {
+	height: 100vh;
+}
+
+.header-wrap {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;	
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 85px;
+	width: 100%;	
+	position: fixed;
+	background-color: #fff;		
+}
+
+.logo {
+	display: flex;
+	width: 240px;
+	margin-left: 100px;	
+}
+
+.logo .logo-text {
+	font-weight: 600;
+	font-size: 24px;
+	color: #777;	
+}
+
+.menu {
+	width: 350px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	margin-right: 120px;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #777;
+	font-size: 20px;
+}
+
+.menu a:hover {
+	color: #bfba55;
+}
+
+.landing-logo {		
+	height: 80vh;
+	width: 100%;
+	background: url(../img/home-bg.jpg) no-repeat;
+	background-size: cover; 	
+	margin-top: 85px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.landing-logo .header-heading {
+	color: #fff;
+	font-size: 72px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.landing-logo .header-text {
+	color: #bfba55;
+	font-size: 16px;
+	margin-top: 17px;
+}
+
+.landing-logo .header_button {
+	background-color: #fff;
+	width: 160px;
+	height: 44px;
+	border: none;
+	border-radius: 20px;
+	margin-top: 50px;
+	color: #777; 
+	font-size: 11px;
+	font-weight: 600;	
+}
+
+main {
+	max-width: 1200px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;	
+	margin: 0 auto;
+}
+
+main article {	
+	display: flex;
+	justify-content: center;
+	margin-top: 87px;
+	width: 100%;	
+}
+
+main article.first-article {
+	margin-top: 0px;
+}
+
+main .article-wrap {
+	max-width: 945px;
+	height: 1007px;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main .article-img {
+	height: 629px;
+	max-width: 945px;	
+}
+
+main .article-img img {
+	display: block;
+	width: 100%;
+  	height: 100%;
+	object-fit: cover;
+}
+
+main .article-text {
+	margin-top: 38px;
+	margin-left: 2px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+main .article-text h2 {
+	font-size: 30px;
+	font-weight: 600;	
+}
+
+main .article-text .author-text {
+	font-size: 18px;
+}
+
+main .author-info {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 45px;	
+	margin-top: 10px;
+}
+
+main .author-info .author-img {
+	width: 45px;
+	height: 45px;
+}
+
+main .author-info .author-img img {
+	display: block;
+	width: 100%;
+  	height: 100%;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+main .author-info .author {
+	margin-left: 5px;	
+}
+
+main .author-info .date {
+	margin-left: 15px;	
+}
+
+main .author-info .comments {
+	margin-left: 15px;	
+}
+
+main .article-text .text {
+	display: block;
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #777;
+}
+
+.article-button {
+	background-color: #fff;
+	width: 188px;
+	height: 50px;
+	border: 1px solid #777;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 34px;
+	color: #777;
+}
+
+hr {
+	color: #777;	
+	width: 100%;
+	margin-top: 52px;
+}
+
+footer {
+	width: 100%;	
+	height: 355px;
+	display: flex;	
+	justify-content: center;
+	align-items: center;	
+	margin-top: 44px;		
+	background-color: #000000;
+}
+
+.epam-lab {
+	height: 170px;
+	width: 430px;	
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: -10px;
+	margin-right: 10%;
+}
+
+.epam-lab h2, .talk-to-us h2 {
+	color: #fff;
+	font-size: 32px;	
+}
+
+.epam-lab p, .talk-to-us p {
+	color: #777;
+	font-size: 18px;	
+}
+
+.epam-lab .epam-lab-text {	
+	line-height: 1.5;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.talk-to-us {
+	height: 135px;
+	width: 350px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;	
+	margin-top: -50px;
+}
+
+.talk-to-us .adress, .talk-to-us .phone, .talk-to-us .email {
+	margin-top: 10px;
+}
